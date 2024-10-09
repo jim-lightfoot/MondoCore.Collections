@@ -3,7 +3,7 @@
 ################################################################################
 
 /.vs
-/bin/**
-/obj/**
 /MondoCore.Collections/obj
-/MondoCore.Collections.UnitTests/bin/Debug/net8.0
+/MondoCore.Collections/bin
+/MondoCore.Collections.UnitTests/bin
+/MondoCore.Collections.UnitTests/obj
