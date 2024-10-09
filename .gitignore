@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/bin/**
+/obj/**
+/MondoCore.Collections/obj
+/MondoCore.Collections.UnitTests/bin/Debug/net8.0
