@@ -30,34 +30,34 @@ A set of collections and collection related extensions
 
 <a name="todictionary" />
 
-#### IDictionary<string, object> ToDictionary(this object obj)
+#### <small>IDictionary<string, object></small> ToDictionary<small>(this object obj)</small>
 
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/object dictionary
 
 ***
 <a name="tostringdictionary" />
 
-#### IDictionary<string, string> ToStringDictionary(this object obj)
+#### <small>IDictionary<string, string></small> ToStringDictionary<small>(this object obj)</small>
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/string dictionary
 
 
 ***
 <a name="torodictionary" />
 
-#### IReadOnlyDictionary<string, object> ToReadOnlyDictionary(this object obj)
+#### <small>IReadOnlyDictionary<string, object></small> ToReadOnlyDictionary<small>(this object obj)</small>
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/object readonly dictionary
 
 
 ***
 <a name="torostringdictionary" />
 
-#### IReadOnlyDictionary<string, string> ToReadOnlyStringDictionary(this object obj)
+#### <small>IReadOnlyDictionary<string, string></small> ToReadOnlyStringDictionary<small>(this object obj)</small>
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/string readonly dictionary
 
 ***
 <a name="getproperties" />
 
-#### IEnumerable<(string Name, object Value)>GetProperties(this object obj)
+#### <small>IEnumerable<(string Name, object Value)></small> GetProperties<small>(this object obj)</small>
 >Retrieves the properties and their values from a POCO or anonymous object
 
 <a name="dictionary_extensions" />
@@ -67,25 +67,25 @@ A set of collections and collection related extensions
 ***
 <a name="append" />
 
-#### IDictionary<K, V>? Append<K, V>(this IDictionary<K, V> dict1, IDictionary<K, V>? dict2)
+#### <small>IDictionary<K, V>?</small> Append<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V>? dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (the first dictionary will be returned)
  
 ***
 <a name="appendro" />
 
-#### IDictionary<K, V>? Append<K, V>(this IDictionary<K, V> dict1, IReadOnlyDictionary<K, V>? dict2)
+#### <small>IDictionary<K, V>?</small> Append<K, V><small>(this IDictionary<K, V> dict1, IReadOnlyDictionary<K, V>? dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (the first dictionary will be returned)
  
 ***
 <a name="append_string" />
 
-#### IDictionary<string, string>? AppendStrings(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)
+#### <small>IDictionary<string, string>?</small> AppendStrings<small>(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first as strings. If the value being added is an object then it will be either added as serialized json or dotted values (e.g. Address.ZipCode)
  
 ***
 <a name="merge" />
 
-#### IDictionary<K, V> Merge<K, V>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)
+#### <small>IDictionary<K, V></small> Merge<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (or returns the second dictionary if the first is empty)
 
 <a name="collections" />
@@ -95,12 +95,12 @@ A set of collections and collection related extensions
 ***
 <a name="concurrentlist" />
 
-### class ConcurrentList
+#### class ConcurrentList
 > An implementation of IList that is thread-safe
 
 ***
 <a name="concurrentkeyedqueue" />
 
-### class ConcurrentKeyedQueue
+#### class ConcurrentKeyedQueue
 > A thread safe queue that can also be accessed via a key (like a dictionary)
 
