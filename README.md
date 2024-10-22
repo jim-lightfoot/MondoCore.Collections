@@ -79,13 +79,13 @@ A set of collections and collection related extensions
 ***
 <a name="append_string" />
 
-#### <small>IDictionary<string, string>?</small> AppendStrings<small>(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)</small>
+### <small>IDictionary<string, string>?</small> AppendStrings<small>(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first as strings. If the value being added is an object then it will be either added as serialized json or dotted values (e.g. Address.ZipCode)
  
 ***
 <a name="merge" />
 
-#### <small>IDictionary<K, V></small> Merge<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)</small>
+### <small>IDictionary<K, V></small> Merge<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (or returns the second dictionary if the first is empty)
 
 <a name="collections" />
