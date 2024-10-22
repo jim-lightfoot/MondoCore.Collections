@@ -71,21 +71,21 @@ A set of collections and collection related extensions
 >Adds all the keyvalue pairs from the second dictionary into the first (the first dictionary will be returned)
  
 ***
-<a name="appendro" />
+<a name="appendro"></a>
 
 #### <small>IDictionary<K, V>?</small> Append<K, V><small>(this IDictionary<K, V> dict1, IReadOnlyDictionary<K, V>? dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (the first dictionary will be returned)
  
 ***
-<a name="append_string" />
+<a name="append_string"></a>
 
-### <small>IDictionary<string, string>?</small> AppendStrings<small>(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)</small>
+#### <small>IDictionary<string, string>?</small> AppendStrings<small>(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first as strings. If the value being added is an object then it will be either added as serialized json or dotted values (e.g. Address.ZipCode)
  
 ***
-<a name="merge" />
+<a name="merge"></a>
 
-### <small>IDictionary<K, V></small> Merge<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)</small>
+#### <small>IDictionary<K, V></small> Merge<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (or returns the second dictionary if the first is empty)
 
 <a name="collections" />
@@ -93,13 +93,13 @@ A set of collections and collection related extensions
 ## Collections
 
 ***
-<a name="concurrentlist" />
+<a name="concurrentlist"></a>
 
 #### class ConcurrentList
 > An implementation of IList that is thread-safe
 
 ***
-<a name="concurrentkeyedqueue" />
+<a name="concurrentkeyedqueue"></a>
 
 #### class ConcurrentKeyedQueue
 > A thread safe queue that can also be accessed via a key (like a dictionary)
