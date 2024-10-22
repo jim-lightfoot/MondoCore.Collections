@@ -18,54 +18,54 @@ A set of collections and collection related extensions
     - [ConcurrentList](#concurrentlist)
     - [ConcurrentKeyedQueue](#concurrentkeyedqueue)
 
-<a name="extensions" />
+<a name="extensions"></a>
 
 ## Extensions
 
-<a name="object_extensions" />
+<a name="object_extensions"></a>
 
 ### Object Extensions
 
 ***
 
-<a name="todictionary" />
+<a name="todictionary"></a>
 
 #### <small>IDictionary<string, object></small> ToDictionary<small>(this object obj)</small>
 
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/object dictionary
 
 ***
-<a name="tostringdictionary" />
+<a name="tostringdictionary"></a>
 
 #### <small>IDictionary<string, string></small> ToStringDictionary<small>(this object obj)</small>
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/string dictionary
 
 
 ***
-<a name="torodictionary" />
+<a name="torodictionary"></a>
 
 #### <small>IReadOnlyDictionary<string, object></small> ToReadOnlyDictionary<small>(this object obj)</small>
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/object readonly dictionary
 
 
 ***
-<a name="torostringdictionary" />
+<a name="torostringdictionary"></a>
 
 #### <small>IReadOnlyDictionary<string, string></small> ToReadOnlyStringDictionary<small>(this object obj)</small>
 >Converts a POCO, anonymous object or a different kind of dictionary into a string/string readonly dictionary
 
 ***
-<a name="getproperties" />
+<a name="getproperties"></a>
 
 #### <small>IEnumerable<(string Name, object Value)></small> GetProperties<small>(this object obj)</small>
 >Retrieves the properties and their values from a POCO or anonymous object
 
-<a name="dictionary_extensions" />
+<a name="dictionary_extensions"></a>
 
 ### Dictionary Extensions
 
 ***
-<a name="append" />
+<a name="append"></a>
 
 #### <small>IDictionary<K, V>?</small> Append<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V>? dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (the first dictionary will be returned)
@@ -88,7 +88,7 @@ A set of collections and collection related extensions
 #### <small>IDictionary<K, V></small> Merge<K, V><small>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first (or returns the second dictionary if the first is empty)
 
-<a name="collections" />
+<a name="collections"></a>
 
 ## Collections
 
