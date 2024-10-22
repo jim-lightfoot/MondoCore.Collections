@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MondoCore.Common
+namespace MondoCore.Collections.Concurrent
 {
     /// <summary>
     /// A thread safe queue that can also be accessed via a key (like a dictionary)
