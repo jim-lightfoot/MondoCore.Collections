@@ -84,6 +84,7 @@ namespace MondoCore.Collections.Internal
                 return count;
             }
         }
+
         public bool ContainsKey(K key)
         {
             foreach(var dict in _dictionaries) 

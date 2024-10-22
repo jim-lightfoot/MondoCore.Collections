@@ -80,6 +80,34 @@ namespace MondoCore.Collections.UnitTests
             Assert.AreEqual(9200,               engine.Piston.Diameter);
         }
 
+        [TestMethod]
+        public void DictionaryExtensions_Merge()
+        {
+            IDictionary<string, string> dict1  = new Dictionary<string, string> { { "Make", "Chevy" }, { "Model", "Camaro" } };
+            IDictionary<string, string> dict2  = new Dictionary<string, string> { { "Year", "1969" },  { "Color", "Blue" } };
+            var result = dict1!.Merge(dict2);
+            
+            Assert.AreEqual(4,        result.Count());
+            Assert.AreEqual("Chevy",  result["Make"]);
+            Assert.AreEqual("Camaro", result["Model"]);
+            Assert.AreEqual("1969",   result["Year"]);
+            Assert.AreEqual("Blue",   result["Color"]);
+        }
+
+        [TestMethod]
+        public void DictionaryExtensions_Merge_overlap()
+        {
+            IDictionary<string, string> dict1  = new Dictionary<string, string> { { "Make", "Chevy" }, { "Model", "Camaro" }, { "Year", "1970" } };
+            IDictionary<string, string> dict2  = new Dictionary<string, string> { { "Year", "1969" },  { "Color", "Blue" } };
+            var result = dict1.Merge(dict2);
+            
+            Assert.AreEqual(4,        result.Count);
+            Assert.AreEqual("Chevy",  result["Make"]);
+            Assert.AreEqual("Camaro", result["Model"]);
+            Assert.AreEqual("1969",   result["Year"]);
+            Assert.AreEqual("Blue",   result["Color"]);
+        }
+
         private class Engine 
         {
             public int      Cylinders       { get; set; }

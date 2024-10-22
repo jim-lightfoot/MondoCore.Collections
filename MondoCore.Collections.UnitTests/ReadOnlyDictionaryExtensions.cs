@@ -9,8 +9,8 @@ namespace MondoCore.Collections.UnitTests
         [TestMethod]
         public void ReadOnlyDictionaryExtensions_Merge_success()
         {
-            var dict1 = new Dictionary<string, string> { { "City", "San Francisco" }, { "State", "California" }};
-            var dict2 = new Dictionary<string, string> { { "County", "King" }, { "Street", "4th" }};
+            IDictionary<string, string> dict1 = new Dictionary<string, string> { { "City", "San Francisco" }, { "State", "California" }};
+            IDictionary<string, string> dict2 = new Dictionary<string, string> { { "County", "King" }, { "Street", "4th" }};
             var all = dict1.Merge(dict2);
 
             Assert.AreEqual("San Francisco", all["City"]);

@@ -54,6 +54,23 @@ namespace MondoCore.Collections
         }
 
         /// <summary>
+        /// Merge the two dictionaries
+        /// </summary>
+        public static IDictionary<K, V> Merge<K, V>(this IDictionary<K, V> dict1, IDictionary<K, V> dict2)
+        {
+            if(dict2 == null || dict2.Count == 0)
+                return dict1;
+       
+            if(dict1 == null)
+                return dict2;
+       
+            foreach(var kv in dict2)
+                dict1[kv.Key] = kv.Value;
+
+            return dict1;
+        }
+
+        /// <summary>
         /// Appends the values of the second dictionary onto the first
         /// </summary>
         private static void AppendValue(IDictionary<string, string> dict1, string prefix, object val, bool childrenAsJson)
