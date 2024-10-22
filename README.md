@@ -13,7 +13,7 @@ A set of collections and collection related extensions
         - [Append](#append)
         - [Append (readonly)](#appendro)
         - [AppendStrings](#appendstrings)
-        - [Merge](#appendstrings)
+        - [Merge](#merge)
 - [Collections](#collections)
     - [ConcurrentList](#concurrentlist)
     - [ConcurrentKeyedQueue](#concurrentkeyedqueue)
@@ -77,7 +77,7 @@ A set of collections and collection related extensions
 >Adds all the keyvalue pairs from the second dictionary into the first (the first dictionary will be returned)
  
 ***
-<a name="append_string"></a>
+<a name="appendstrings"></a>
 
 #### <small>IDictionary<string, string>?</small> AppendStrings<small>(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)</small>
 >Adds all the keyvalue pairs from the second dictionary into the first as strings. If the value being added is an object then it will be either added as serialized json or dotted values (e.g. Address.ZipCode)
