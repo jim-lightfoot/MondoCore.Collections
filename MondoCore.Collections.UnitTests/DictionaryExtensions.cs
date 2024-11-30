@@ -58,6 +58,26 @@ namespace MondoCore.Collections.UnitTests
         }
 
         [TestMethod]
+        public void DictionaryExtensions_AppendStrings_wTransform_Success()
+        {
+            var make  = "Chevy";
+            var model = "Camaro";
+            var color = "Black";
+
+            var props = new { make, model, color };
+            var dict1 = new Dictionary<string, string>();
+            var dict2 = props.ToReadOnlyDictionary();
+            
+            dict1.AppendStrings(dict2, transformKey: (name)=> name?.Capitalize() ?? "");
+
+            Assert.AreEqual(3, dict1.Count);
+
+            Assert.AreEqual("Camaro",  dict1["Model"]);
+            Assert.AreEqual("Chevy",   dict1["Make"]);
+            Assert.AreEqual("Black",   dict1["Color"]);
+        }
+
+        [TestMethod]
         public void DictionaryExtensions_AppendStrings_json()
         {
             IDictionary<string, string> dict1 = new Dictionary<string, string> { { "Model", "Camaro" } };
@@ -122,4 +142,19 @@ namespace MondoCore.Collections.UnitTests
             public int     Diameter    { get; set; } 
         }
     }
+
+    public static class Extensions
+    {
+        public static string Capitalize(this string? str)
+        {
+            if(string.IsNullOrWhiteSpace(str))
+                return "";
+
+            if(str.Length == 1)
+                return str.ToUpper();
+
+            return str.Substring(0, 1).ToUpper() + str.Substring(1);
+        }
+    }
+
 }

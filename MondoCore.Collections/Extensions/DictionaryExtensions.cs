@@ -42,12 +42,15 @@ namespace MondoCore.Collections
         /// <summary>
         /// Appends the values of the second dictionary onto the first
         /// </summary>
-        public static IDictionary<string, string>? AppendStrings(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false)
+        public static IDictionary<string, string>? AppendStrings(this IDictionary<string, string> dict1, IReadOnlyDictionary<string, object>? dict2, bool childrenAsJson = false, Func<string, string>? transformKey = null)
         {
+            if(transformKey == null)
+                transformKey = (n) => n;
+
             if(dict1 != null && dict2 != null)
             {
                 foreach(var kv in dict2)
-                    AppendValue(dict1, kv.Key, kv.Value, childrenAsJson);
+                    AppendValue(dict1, transformKey(kv.Key), kv.Value, childrenAsJson);
             }
 
             return dict1;
@@ -76,7 +79,7 @@ namespace MondoCore.Collections
         private static void AppendValue(IDictionary<string, string> dict1, string prefix, object val, bool childrenAsJson)
         {
             if(val.ConvertToString(out string? strVal))
-                dict1[prefix] = strVal;
+                dict1[prefix] = strVal ?? "";
             else if(childrenAsJson)
             {
                 dict1[prefix] = JsonConvert.SerializeObject(val);

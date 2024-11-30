@@ -12,7 +12,7 @@
     <Copyright>© Jim Lightfoot, All Rights Reserved</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <Version>2.1.0</Version>
+    <Version>2.1.1</Version>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/jim-lightfoot/MondoCore.Collections</RepositoryUrl>
     <PackageTags>mondocore;collections</PackageTags>
